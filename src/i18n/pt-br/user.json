@@ -1,0 +1,16 @@
+{
+  "unique": {
+    "username": "Este usuário já existe",
+    "email": "Este usuário já existe"
+  },
+  "validation": {
+    "is_empty": "é obrigatório"
+  },
+  "error": {
+    "username_or_email_exists": "Nome de usuário ou e-mail já existe",
+    "email_exists": "Já existe uma conta com este e-mail",
+    "not_found": "Usuário não encontrado",
+    "invalid_password": "Senha inválida",
+    "invalid_token": "Token inválido"
+  }
+}

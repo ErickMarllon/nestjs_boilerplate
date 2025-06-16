@@ -1,0 +1,9 @@
+{
+  "validation": {
+    "error": "Erro de validação comum"
+  },
+  "error": {
+    "internal_server_error": "Ocorreu um erro interno do servidor",
+    "entity_not_found": "Entidade não encontrada"
+  }
+}
