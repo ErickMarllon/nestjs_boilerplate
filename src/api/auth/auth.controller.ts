@@ -1,10 +1,9 @@
 import { AllConfigType } from '@/config/config.type';
 import { CurrentUser } from '@/decorators/current-user.decorator';
 import { ApiAuth, ApiPublic } from '@/decorators/http.decorators';
-import { Body, Controller, Get, Post, Query, Res } from '@nestjs/common';
+import { Body, Controller, Get, Post, Query } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { ApiTags } from '@nestjs/swagger';
-import { Response } from 'express';
 import { AuthService } from './auth.service';
 import { EmailReqDto } from './dto/email.req.dto';
 import { EmailResDto } from './dto/email.res.dto';
@@ -63,10 +62,7 @@ export class AuthController {
     summary: 'Refresh token',
   })
   @Get('verify/email')
-  async verifyEmail(
-    @Query('token') token: string,
-    @Res() res: Response,
-  ): Promise<EmailResDto> {
+  async verifyEmail(@Query('token') token: string): Promise<EmailResDto> {
     await this.authService.verifyEmailToken(token);
 
     // const baseUrl = `${this.configService.get('web.url', { infer: true })}`;
