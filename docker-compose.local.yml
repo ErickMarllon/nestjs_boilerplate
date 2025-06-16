@@ -24,7 +24,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: nestjs_dashboard
+      POSTGRES_DB: dashboard
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       TZ: 'UTC'
@@ -37,7 +37,7 @@ services:
     image: redis/redis-stack:latest
     restart: always
     ports:
-      - '6379:6379'
+      - '6380:6379'
       - '8001:8001'
     volumes:
       - redis_data:/data

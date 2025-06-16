@@ -47,6 +47,7 @@ ENV NODE_ENV production
 RUN pnpm prune --prod
 RUN pnpm install --prod
 
+
 USER node
 
 ######################
@@ -55,6 +56,9 @@ USER node
 
 FROM node:20-alpine AS production
 WORKDIR /app
+
+# Install and use pnpm
+RUN npm install -g pnpm
 
 RUN mkdir -p src/generated && chown -R node:node src
 
