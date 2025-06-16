@@ -71,6 +71,9 @@ importers:
       compression:
         specifier: ^1.7.5
         version: 1.7.5
+      dotenv:
+        specifier: ^16.5.0
+        version: 16.5.0
       handlebars:
         specifier: ^4.7.8
         version: 4.7.8
@@ -89,6 +92,9 @@ importers:
       nestjs-pino:
         specifier: ^4.1.0
         version: 4.1.0(@nestjs/common@10.4.7(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(pino-http@10.3.0)
+      nestjs-system:
+        specifier: 'link:'
+        version: 'link:'
       nodemailer:
         specifier: ^6.9.16
         version: 6.9.16
@@ -147,6 +153,9 @@ importers:
       '@types/compression':
         specifier: ^1.7.5
         version: 1.7.5
+      '@types/dotenv':
+        specifier: ^8.2.3
+        version: 8.2.3
       '@types/eslint__js':
         specifier: ^8.42.3
         version: 8.42.3
@@ -1775,6 +1784,10 @@ packages:
 
   '@types/debug@4.1.12':
     resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
+
+  '@types/dotenv@8.2.3':
+    resolution: {integrity: sha512-g2FXjlDX/cYuc5CiQvyU/6kkbP1JtmGzh0obW50zD7OKeILVL0NSpPWLXVfqoAGQjom2/SLLx9zHq0KXvD6mbw==}
+    deprecated: This is a stub types definition. dotenv provides its own type definitions, so you do not need this installed.
 
   '@types/ejs@3.1.5':
     resolution: {integrity: sha512-nv+GSx77ZtXiJzwKdsASqi+YQ5Z7vwHsTP0JY2SiQgjGckkBRKZnk8nIM+7oUZ1VCtuTz0+By4qVR7fqzp/Dfg==}
@@ -8137,6 +8150,10 @@ snapshots:
   '@types/debug@4.1.12':
     dependencies:
       '@types/ms': 0.7.34
+
+  '@types/dotenv@8.2.3':
+    dependencies:
+      dotenv: 16.5.0
 
   '@types/ejs@3.1.5':
     optional: true
