@@ -1,28 +1,29 @@
+// eslint.config.js
 import eslint from '@eslint/js';
-import prettierRecommended from 'eslint-plugin-prettier/recommended';
-import tsEslint from 'typescript-eslint';
+import prettier from 'eslint-plugin-prettier';
+import tseslint from 'typescript-eslint';
 
-export default tsEslint.config(
+export default [
   eslint.configs.recommended,
-  ...tsEslint.configs.recommended,
-  prettierRecommended,
+  ...tseslint.configs.recommended,
   {
+    files: ['**/*.ts'],
     languageOptions: {
       parserOptions: {
         project: './tsconfig.json',
-        tsconfigRootDir: import.meta.dirname,
+        tsconfigRootDir: new URL('.', import.meta.url).pathname,
         sourceType: 'module',
       },
+      globals: {
+        __VUE_HMR_RUNTIME__: 'readonly',
+      },
     },
-    ignores: [
-      'eslint.config.mjs',
-      'docs/.vuepress/**/*',
-      'src/generated/i18n.generated.ts',
-    ],
-    globals: {
-      __VUE_HMR_RUNTIME__: 'readonly',
+    plugins: {
+      prettier,
     },
     rules: {
+      'prettier/prettier': 'warn',
+
       '@typescript-eslint/interface-name-prefix': 'off',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
@@ -37,4 +38,11 @@ export default tsEslint.config(
       ],
     },
   },
-);
+  {
+    ignores: [
+      'eslint.config.mjs',
+      'docs/.vuepress/**/*',
+      'src/generated/i18n.generated.ts',
+    ],
+  },
+];
