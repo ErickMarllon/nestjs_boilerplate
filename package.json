@@ -96,7 +96,7 @@
     "@typescript-eslint/eslint-plugin": "^8.34.1",
     "@typescript-eslint/parser": "^8.34.1",
     "@vuepress/bundler-vite": "2.0.0-rc.23",
-    "@vuepress/plugin-markdown-image": "2.0.0-rc.52",
+    "@vuepress/plugin-markdown-image": "2.0.0-rc.108",
     "@vuepress/plugin-markdown-tab": "2.0.0-rc.52",
     "@vuepress/plugin-search": "2.0.0-rc.52",
     "@vuepress/theme-default": "2.0.0-rc.52",
