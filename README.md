@@ -19,7 +19,7 @@
 
 NestJS dashboard for a typical project
 
-Live demo coming soon on [Render](https://render.com/)\*\*
+
 
 ## Getting started
 
