@@ -58,7 +58,6 @@ $ pnpm start:prod
 
 ## Features
 
-- [x] Fastify support. (Checkout the [`feature.fastify`](https://github.com/ErickMarllon/nestjs-dashboard/tree/feature.fastify) branch)
 - [x] Database. Support [TypeORM](https://www.npmjs.com/package/typeorm)
 - [x] Seeding ([Typeorm Extension](https://www.npmjs.com/package/typeorm-extension)).
 - [x] Config Service ([@nestjs/config](https://www.npmjs.com/package/@nestjs/config)).
@@ -82,7 +81,3 @@ Please read the [docs](docs/README.md). It contains the details about the projec
 
 - [Awesome Nest dashboard](https://github.com/NarHakobyan/awesome-nest-dashboard)
 - [Brocoders NestJS dashboard](https://github.com/brocoders/nestjs-dashboard)
-
-## Support
-
-[Discuss on Github](https://github.com/ErickMarllon/nestjs-dashboard/discussions)
