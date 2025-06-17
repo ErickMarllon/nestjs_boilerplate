@@ -41,6 +41,7 @@
       "@/web/*": ["src/web/*"],
       "@/shared/*": ["src/shared/*"],
       "@/utils/*": ["src/utils/*"]
-    }
+    },
+    "types": ["node", "jest", "express"]
   }
 }
