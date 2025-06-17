@@ -193,8 +193,8 @@ importers:
         specifier: 2.0.0-rc.108
         version: 2.0.0-rc.108(markdown-it@14.1.0)(typescript@5.8.3)(vuepress@2.0.0-rc.17(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.32)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.16(typescript@5.8.3)))
       '@vuepress/plugin-markdown-tab':
-        specifier: 2.0.0-rc.52
-        version: 2.0.0-rc.52(markdown-it@14.1.0)(typescript@5.8.3)(vuepress@2.0.0-rc.17(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.32)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.16(typescript@5.8.3)))
+        specifier: 2.0.0-rc.108
+        version: 2.0.0-rc.108(markdown-it@14.1.0)(typescript@5.8.3)(vuepress@2.0.0-rc.17(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.32)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.16(typescript@5.8.3)))
       '@vuepress/plugin-search':
         specifier: 2.0.0-rc.52
         version: 2.0.0-rc.52(typescript@5.8.3)(vuepress@2.0.0-rc.17(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.32)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.16(typescript@5.8.3)))
@@ -1178,6 +1178,14 @@ packages:
 
   '@mdit/plugin-tab@0.13.2':
     resolution: {integrity: sha512-evpIXvo6vXRWhgNE6vu4ok1I2dVOzrBYmBUGc1gW8nT9MvkW9litu7RbJ6CafscqaiiYRIM5Oib1ahS0lwte6g==}
+    peerDependencies:
+      markdown-it: ^14.1.0
+    peerDependenciesMeta:
+      markdown-it:
+        optional: true
+
+  '@mdit/plugin-tab@0.21.0':
+    resolution: {integrity: sha512-mpbgYuvU5YlFnVyaRcH6EhduuA+4SAhz5kg5nq/IvpI0qE3TEqxngAd1K5iH3dZPNewCJsQR9Gj6KzQfELouMA==}
     peerDependencies:
       markdown-it: ^14.1.0
     peerDependenciesMeta:
@@ -2181,6 +2189,11 @@ packages:
 
   '@vuepress/plugin-markdown-image@2.0.0-rc.108':
     resolution: {integrity: sha512-jj1VaUjtJNdaflmKRV4n+HoIayzZOiEHpGBdm89FsuaiVYc735FzoMb1uWPiGTCrsFfv5HV/3dEO4nbBDcS1xQ==}
+    peerDependencies:
+      vuepress: 2.0.0-rc.23
+
+  '@vuepress/plugin-markdown-tab@2.0.0-rc.108':
+    resolution: {integrity: sha512-ainTUh0zh3jvVoVx7qXqa6ttAWS4dG/3zoq3TxwMNbdTaPHh6A0qhq61DX0Bpf2rGhuoQq71jgtZ/Hlv2qb24g==}
     peerDependencies:
       vuepress: 2.0.0-rc.23
 
@@ -7510,6 +7523,13 @@ snapshots:
     optionalDependencies:
       markdown-it: 14.1.0
 
+  '@mdit/plugin-tab@0.21.0(markdown-it@14.1.0)':
+    dependencies:
+      '@mdit/helper': 0.21.0(markdown-it@14.1.0)
+      '@types/markdown-it': 14.1.2
+    optionalDependencies:
+      markdown-it: 14.1.0
+
   '@mdit/plugin-uml@0.21.0(markdown-it@14.1.0)':
     dependencies:
       '@mdit/helper': 0.21.0(markdown-it@14.1.0)
@@ -8648,6 +8668,18 @@ snapshots:
       '@mdit/plugin-img-size': 0.21.0(markdown-it@14.1.0)
       '@types/markdown-it': 14.1.2
       '@vuepress/helper': 2.0.0-rc.108(typescript@5.8.3)(vuepress@2.0.0-rc.17(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.32)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.16(typescript@5.8.3)))
+      vuepress: 2.0.0-rc.17(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.32)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.16(typescript@5.8.3))
+    transitivePeerDependencies:
+      - markdown-it
+      - typescript
+
+  '@vuepress/plugin-markdown-tab@2.0.0-rc.108(markdown-it@14.1.0)(typescript@5.8.3)(vuepress@2.0.0-rc.17(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.32)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.16(typescript@5.8.3)))':
+    dependencies:
+      '@mdit/plugin-tab': 0.21.0(markdown-it@14.1.0)
+      '@types/markdown-it': 14.1.2
+      '@vuepress/helper': 2.0.0-rc.108(typescript@5.8.3)(vuepress@2.0.0-rc.17(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.32)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.16(typescript@5.8.3)))
+      '@vueuse/core': 13.3.0(vue@3.5.16(typescript@5.8.3))
+      vue: 3.5.16(typescript@5.8.3)
       vuepress: 2.0.0-rc.17(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.32)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.16(typescript@5.8.3))
     transitivePeerDependencies:
       - markdown-it
