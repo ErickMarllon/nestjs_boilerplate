@@ -13,7 +13,7 @@ export default defineUserConfig({
   lang: 'en-US',
   title: 'NestJS dashboard',
   description: 'NestJS dashboard with best practices',
-  base: '/nestjs-dashboard/',
+  base: '/nestjs_boilerplate/',
   bundler: viteBundler(),
   markdown: {
     toc: {
@@ -39,7 +39,7 @@ export default defineUserConfig({
     },
   },
   theme: defaultTheme({
-    repo: 'erickmarllon/nestjs-dashboard',
+    repo: 'erickmarllon/nestjs_boilerplate',
     docsBranch: 'main',
     docsDir: 'docs',
     locales: {
